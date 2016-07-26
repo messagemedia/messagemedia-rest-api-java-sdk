@@ -51,7 +51,7 @@
         <dependency>
             <groupId>com.messagemedia</groupId>
             <artifactId>rest-api-java-sdk</artifactId>
-            <version>0.1.3-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>
