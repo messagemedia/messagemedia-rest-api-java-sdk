@@ -21,6 +21,6 @@
         "http://www.puppycrawl.com/dtds/suppressions_1_1.dtd">
 
 <suppressions>
-    <suppress files="/examples/" checks=".*"/>
+    <suppress files="[\\/]examples[\\/]" checks=".*"/>
     <suppress files="Message.java" checks="ParameterNumber"/>
 </suppressions>
