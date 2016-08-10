@@ -52,6 +52,8 @@ public class SendMessage {
             System.out.println("  Source number: " + (message.getSourceNumber() == null ? "not specified" : message.getSourceNumber()));
             System.out.println("  Status: " + message.getStatus());
             System.out.println("  Status reason: " + (message.getStatusReason() == null ? "N/A" : message.getStatusReason()));
+            System.out.println("  Message expiry date/time: " + (message.getMessageExpiryTimestamp() == null ? "not specified" : message.getMessageExpiryTimestamp()));
+            System.out.println("  Metadata: " + message.getMetadata());
         } catch (RestApiException exception) {
             System.err.println("Error confirming message(s). " + exception.getMessage());
             if (exception instanceof RestApiClientException) {

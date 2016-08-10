@@ -29,7 +29,7 @@ public class Main {
                 Action action = new ActionFactory().createAction(args[0]);
                 action.execute(Arrays.copyOfRange(args, 1, args.length));
             } catch (ActionException e) {
-                System.err.println("Unrecognised action '" + args[0]);
+                System.err.println("Unrecognised action '" + args[0] + "'");
                 System.exit(1);
             }
         } else {

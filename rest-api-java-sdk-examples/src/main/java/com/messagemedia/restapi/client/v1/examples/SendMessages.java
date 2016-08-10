@@ -33,7 +33,7 @@ public class SendMessages {
         final String secretKey = "<your secret key>";
 
         // put in your number here
-        String destinationNumber = "<destination number";
+        String destinationNumber = "<destination number>";
 
         final RestApiClient restApiClient = RestApiClientBuilder.newBuilder(apiKey, secretKey).build();
 
@@ -52,10 +52,8 @@ public class SendMessages {
         try {
             // NOTE: This will simulate a successful delivery for the messages.
             // For sending to a handset, omit the MessageListProperties or use MessageSendingMode.PRODUCTION
-            final RestApiResponse<MessageList> response = restApiClient.messaging()
-                                                                       .sendMessages(messages,
-                                                                                     MessageListProperties.withSendingMode(
-                                                                                             MessageSendingMode.FUNCTIONAL_TEST_DELIVERED));
+            final RestApiResponse<MessageList> response =
+                    restApiClient.messaging().sendMessages(messages, MessageListProperties.withSendingMode(MessageSendingMode.FUNCTIONAL_TEST_DELIVERED));
             printSuccessOutput(response);
         } catch (RestApiException exception) {
             printFailureOutput(exception);
